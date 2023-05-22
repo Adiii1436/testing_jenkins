@@ -12,7 +12,6 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                cd testing_jenkins
                 pip install -r requirements.txt
                 '''
             }
@@ -21,7 +20,6 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                cd testing_jenkins
                 python3 main.py
                 python3 main.py --name=Brad
                 '''
